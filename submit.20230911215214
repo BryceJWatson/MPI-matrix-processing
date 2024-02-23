@@ -1,0 +1,84 @@
+Assignment Submission
+       Unit: cosc330
+ Assignment: a3
+   Username: bwatso25
+     Who is: Bryce Watson <bwatso25@myune.edu.au>
+       Date: Mon 11 Sep 2023 21:52:14 AEST
+----------------------------------------------------------------
+Files submitted:
+-rw-r--r--. 1 bwatso25 bwatso25 8.2K Sep 11 21:47 a3.c
+-rw-r--r--. 1 bwatso25 bwatso25  866 Sep  3 18:20 getMatrix.c
+-rw-r--r--. 1 bwatso25 bwatso25  561 Sep 11 21:31 makefile
+-rw-r--r--. 1 bwatso25 bwatso25 2.6K Sep  3 18:03 matrix.c
+-rw-r--r--. 1 bwatso25 bwatso25  486 Sep  3 17:06 matrix.h
+-rw-r--r--. 1 bwatso25 bwatso25  837 Sep  8 01:11 mkRandomMatrix.c
+-rwx------. 1 bwatso25 bwatso25   64 Sep 11 21:49 test_matrix
+-rw-rw-r--. 1 bwatso25 bwatso25  400 Sep 11 21:50 test_results
+----------------------------------------------------------------
+Script of session:
+Script started on 2023-09-11 21:49:09+10:00 [TERM="xterm-256color" TTY="/dev/pts/14" COLUMNS="316" LINES="16"]
+]0;bwatso25@turing:~/Desktop/cosc330_2023/assignment_3[?2004h[36m[[m[34mbwatso25@turing[m [32massignment_3[m[36m][m $ ssh bourbaki
+[?2004lLast login: Mon Sep 11 12:15:02 2023 from turing.une.edu.au
+]0;bwatso25@bourbaki:~[36m[[m[34mbwatso25@bourbaki[m [32m~[m[36m][m $ cd Desktop/cosc330_2023-[K/assignment_3
+]0;bwatso25@bourbaki:~/Desktop/cosc330_2023/assignment_3[36m[[m[34mbwatso25@bourbaki[m [32massignment_3[m[36m][m $ make clean
+rm -f *~ *.o a3 getMatrix mkRandomMatrix
+]0;bwatso25@bourbaki:~/Desktop/cosc330_2023/assignment_3[36m[[m[34mbwatso25@bourbaki[m [32massignment_3[m[36m][m $ make
+mpicc -Wall -pedantic -g -c matrix.c
+mpicc -Wall -pedantic -g a3.c matrix.o -o a3 -lm
+mpicc -Wall -pedantic -g getMatrix.c matrix.o -o getMatrix
+mpicc -Wall -pedantic -g mkRandomMatrix.c matrix.o -o mkRandomMatrix
+]0;bwatso25@bourbaki:~/Desktop/cosc330_2023/assignment_3[36m[[m[34mbwatso25@bourbaki[m [32massignment_3[m[36m][m $ ./mkRandomMatrix test_matrix 4
+Finished writing test_matrix
+]0;bwatso25@bourbaki:~/Desktop/cosc330_2023/assignment_3[36m[[m[34mbwatso25@bourbaki[m [32massignment_3[m[36m][m $ ./[K[Kmpirun -np 4 ./a3 test_matrix test_results 4
+Original matrix:
+4 9 3 5 
+8 3 1 4 
+2 3 4 8 
+9 0 10 5 
+
+Final processed matrix:
+42 41 45 36 
+44 56 59 46 
+48 58 56 46 
+32 51 42 43 
+]0;bwatso25@bourbaki:~/Desktop/cosc330_2023/assignment_3[36m[[m[34mbwatso25@bourbaki[m [32massignment_3[m[36m][m $ ./[K[Kmake run
+mpirun -np 4 ./a3 test_matrix test_results 4
+Original matrix:
+4 9 3 5 
+8 3 1 4 
+2 3 4 8 
+9 0 10 5 
+
+Final processed matrix:
+42 41 45 36 
+44 56 59 46 
+48 58 56 46 
+32 51 42 43 
+]0;bwatso25@bourbaki:~/Desktop/cosc330_2023/assignment_3[36m[[m[34mbwatso25@bourbaki[m [32massignment_3[m[36m][m $ ./test_[K[K[K[K[KgetMatrix test_results 45[K
+test_results[1][1] = 42
+test_results[1][2] = 41
+test_results[1][3] = 45
+test_results[1][4] = 36
+test_results[2][1] = 44
+test_results[2][2] = 56
+test_results[2][3] = 59
+test_results[2][4] = 46
+test_results[3][1] = 48
+test_results[3][2] = 58
+test_results[3][3] = 56
+test_results[3][4] = 46
+test_results[4][1] = 32
+test_results[4][2] = 51
+test_results[4][3] = 42
+test_results[4][4] = 43
+Finished reading  test_results
+]0;bwatso25@bourbaki:~/Desktop/cosc330_2023/assignment_3[36m[[m[34mbwatso25@bourbaki[m [32massignment_3[m[36m][m $ make clean
+rm -f *~ *.o a3 getMatrix mkRandomMatrix
+]0;bwatso25@bourbaki:~/Desktop/cosc330_2023/assignment_3[36m[[m[34mbwatso25@bourbaki[m [32massignment_3[m[36m][m $ exit
+logout
+Connection to bourbaki closed.
+]0;bwatso25@turing:~/Desktop/cosc330_2023/assignment_3[?2004h[36m[[m[34mbwatso25@turing[m [32massignment_3[m[36m][m $ exit
+[?2004lexit
+
+Script done on 2023-09-11 21:51:08+10:00 [COMMAND_EXIT_CODE="0"]
+3625
